@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Carmona Fisioterapia | Fisioterapia Esportiva e Recovery em Osasco</title>
+<meta name="description" content="Fisioterapia esportiva e Recovery em Osasco-SP. Ventosaterapia, Dry Needling, Eletroestimulação e Fotobiomodulação. Avaliação 5,0 no Google. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#16161A">
+
+<link rel="icon" type="image/png" sizes="512x512" href="images/Captura de tela 2026-11-07 092820.png">
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- SEO local: ajuda a aparecer no Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhysicalTherapy",
+  "name": "Felipe Carmona Fisioterapia",
+  "telephone": "+55 11 94707-8104",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. dos Remédios, 779 - Remédios",
+    "addressLocality": "Osasco",
+    "addressRegion": "SP",
+    "postalCode": "06298-005",
+    "addressCountry": "BR"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "27" },
+  "openingHours": "Mo-Su 06:00-22:00"
+}
+</script>
+
+<style>
+:root{
+  --red:#E01E2B;
+  --red-dark:#B3121E;
+  --ink:#16161A;
+  --ink-2:#1F1F25;
+  --gray:#D9DADC;
+  --gray-2:#8E9094;
+  --white:#fff;
+  --radius:20px;
+  --shadow:0 20px 60px rgba(0,0,0,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--ink);color:var(--white);line-height:1.6;overflow-x:hidden}
+img,video,iframe{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin-inline:auto}
+section{padding:96px 0;position:relative}
+.display{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.5px}
+.eyebrow{display:inline-block;color:var(--red);font-weight:700;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+h2.display{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px}
+.lead{color:var(--gray-2);max-width:620px;font-size:1.05rem}
+.center{text-align:center}.center .lead{margin-inline:auto}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;font-weight:700;border:2px solid transparent;cursor:pointer;transition:.3s;font-size:1rem}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px rgba(224,30,43,.4)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-3px)}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+
+/* Header */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:.3s;padding:18px 0}
+header.scrolled{background:rgba(22,22,26,.92);backdrop-filter:blur(14px);padding:10px 0;box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.6rem}
+.logo span{color:var(--red)}
+.logo small{display:block;font-family:Inter;font-style:normal;font-size:.6rem;letter-spacing:4px;color:var(--gray-2);font-weight:600}
+.menu{display:flex;gap:32px;align-items:center}
+.menu a:not(.btn){font-size:.92rem;font-weight:500;color:var(--gray);transition:.2s}
+.menu a:not(.btn):hover{color:var(--red)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px;
+  background:
+   radial-gradient(900px 500px at 85% 20%,rgba(224,30,43,.28),transparent 60%),
+   radial-gradient(700px 400px at 0% 100%,rgba(224,30,43,.12),transparent 60%),var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);margin-bottom:22px}
+.hero h1 em{color:var(--red);font-style:italic}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:520px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.rating{display:flex;align-items:center;gap:14px;color:var(--gray)}
+.stars{color:#FFC93C;letter-spacing:3px;font-size:1.2rem}
+.hero-img{position:relative}
+.hero-img .frame{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:linear-gradient(135deg,var(--ink-2),#2a2a32)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:-24px;bottom:36px;background:#fff;color:var(--ink);padding:16px 22px;border-radius:16px;box-shadow:var(--shadow);animation:float 4s ease-in-out infinite}
+.badge b{display:block;font-size:1.8rem;color:var(--red);line-height:1}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* Faixa de números */
+.stats{background:var(--red);padding:38px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats b{font-size:2.6rem;display:block;line-height:1}
+.stats span{font-size:.9rem;opacity:.9}
+
+/* 3 entregas */
+.deliver-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.card{background:var(--ink-2);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:36px 30px;transition:.35s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:.4s}
+.card:hover{transform:translateY(-8px);border-color:rgba(224,30,43,.5)}
+.card:hover::before{transform:scaleX(1)}
+.card .ico{width:60px;height:60px;border-radius:16px;background:rgba(224,30,43,.15);display:grid;place-items:center;font-size:1.7rem;margin-bottom:22px}
+.card h3{font-size:1.25rem;margin-bottom:10px}
+.card p{color:var(--gray-2);font-size:.97rem}
+.card ul{list-style:none;margin-top:16px}
+.card li{color:var(--gray);font-size:.92rem;padding:5px 0}
+.card li::before{content:"✓ ";color:var(--red);font-weight:700}
+
+/* Serviços */
+.services{background:var(--ink-2)}
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+.serv{background:var(--ink);border-radius:16px;padding:26px;border:1px solid rgba(255,255,255,.06);transition:.3s;display:flex;gap:16px;align-items:flex-start}
+.serv:hover{border-color:var(--red);transform:translateY(-4px)}
+.serv .ico{font-size:1.6rem}
+.serv h4{margin-bottom:4px}
+.serv p{font-size:.88rem;color:var(--gray-2)}
+
+/* Sobre */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.photos .ph{border-radius:var(--radius);overflow:hidden;background:linear-gradient(135deg,var(--ink-2),#2a2a32);aspect-ratio:3/4}
+.photos .ph:nth-child(2){margin-top:40px}
+.photos .ph:nth-child(3){grid-column:span 2;aspect-ratio:16/9;margin-top:-10px}
+.photos img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.photos .ph:hover img{transform:scale(1.07)}
+.checks{list-style:none;margin:26px 0 34px}
+.checks li{padding:8px 0;color:var(--gray)}
+.checks li::before{content:"●";color:var(--red);margin-right:12px;font-size:.7rem}
+
+/* Vídeos */
+.videos{background:var(--ink-2)}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.vid{border-radius:var(--radius);overflow:hidden;background:#000;aspect-ratio:9/16;position:relative;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+.vid video,.vid iframe{width:100%;height:100%;object-fit:cover;border:0}
+.vid .tag{position:absolute;left:14px;top:14px;background:var(--red);padding:5px 12px;border-radius:999px;font-size:.72rem;font-weight:700;z-index:2}
+
+/* Avaliações */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.rev{background:var(--ink-2);padding:30px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.07)}
+.rev .stars{font-size:1rem;margin-bottom:14px}
+.rev p{color:var(--gray);margin-bottom:20px;font-size:.97rem}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-weight:700}
+.who small{color:var(--gray-2);display:block}
+.reply{margin-top:18px;padding:14px;background:rgba(255,255,255,.04);border-left:3px solid var(--red);border-radius:8px;font-size:.84rem;color:var(--gray-2)}
+.reply b{color:#fff}
+
+/* FAQ */
+.faq-list{max-width:780px;margin:50px auto 0}
+.faq{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq button{width:100%;background:none;border:0;color:#fff;text-align:left;padding:22px 0;font-size:1.05rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;font-family:inherit}
+.faq button::after{content:"+";color:var(--red);font-size:1.5rem;transition:.3s}
+.faq.open button::after{transform:rotate(45deg)}
+.faq .ans{max-height:0;overflow:hidden;transition:.4s;color:var(--gray-2)}
+.faq.open .ans{max-height:200px;padding-bottom:20px}
+
+/* Contato */
+.contact{background:linear-gradient(135deg,var(--red),var(--red-dark))}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact h2{color:#fff}
+.info p{margin:12px 0;display:flex;gap:12px}
+.form{background:var(--ink);padding:36px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.form h3{margin-bottom:20px}
+.form input,.form select{width:100%;padding:15px 18px;margin-bottom:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:var(--ink-2);color:#fff;font:inherit}
+.form input:focus,.form select:focus{outline:2px solid var(--red)}
+.form .btn{width:100%;justify-content:center}
+.map{margin-top:24px;border-radius:16px;overflow:hidden;height:220px}
+.map iframe{width:100%;height:100%;border:0}
+
+footer{background:#0d0d10;padding:34px 0;text-align:center;color:var(--gray-2);font-size:.85rem}
+
+/* WhatsApp flutuante */
+.wpp{position:fixed;right:22px;bottom:22px;z-index:200;width:64px;height:64px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulse 2s infinite}
+.wpp svg{width:34px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* Animação ao rolar */
+.reveal{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  section{padding:70px 0}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .deliver-grid,.serv-grid,.vid-grid,.rev-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .burger{display:block}
+  .menu{position:fixed;inset:0 0 0 30%;background:var(--ink);flex-direction:column;justify-content:center;transform:translateX(100%);transition:.4s;box-shadow:-20px 0 60px rgba(0,0,0,.6)}
+  .menu.open{transform:none}
+  .badge{left:10px}
+  .vid{max-width:340px;margin-inline:auto;width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container nav">
+    <a href="#inicio" class="logo display">Felipe <span>Carmona</span><small>FISIOTERAPIA</small></a>
+    <nav class="menu" id="menu">
+      <a href="#entregas">Resultados</a>
+      <a href="#servicos">Tratamentos</a>
+      <a href="#sobre">Clínica</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato" class="btn btn-red" style="padding:11px 24px">Agendar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Fisioterapia Esportiva & Recovery</span>
+      <h1 class="display">Recupere seu corpo.<br><em>Potencialize</em> seu desempenho.</h1>
+      <p>Atendimento humanizado, atenção a cada detalhe e tecnologia de ponta para você voltar a treinar sem dor e com mais performance.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#contato">Agendar avaliação →</a>
+        <a class="btn btn-ghost" href="#videos">▶ Ver o trabalho</a>
+      </div>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span><b style="color:#fff">5,0</b> · 27 avaliações no Google</span>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <div class="frame">
+        <!-- COLOQUE AQUI: foto da fachada -->
+        <img src="images/Captura de tela 2026-11-07 092820.png" alt="Fachada da Felipe Carmona Fisioterapia" onerror="this.style.display='none'">
+      </div>
+      <div class="badge"><b>5,0 ★</b>Nota no Google</div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div><b data-count="5" data-dec="1">0</b><span>Nota no Google</span></div>
+    <div><b data-count="27">0</b><span>Avaliações 5 estrelas</span></div>
+    <div><b data-count="6">0</b><span>Tecnologias de recovery</span></div>
+    <div><b data-count="22" data-suffix="h">0</b><span>Atendimento até as</span></div>
+  </div>
+</div>
+
+<!-- 3 ENTREGAS -->
+<section id="entregas">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Por que escolher a gente</span>
+      <h2 class="display">Resultado que você sente.<br>Cuidado que você percebe.</h2>
+      <p class="lead">Um atendimento pensado para quem quer atenção de verdade, clareza no tratamento e resultado comprovado.</p>
+    </div>
+    <div class="deliver-grid">
+      <div class="card reveal">
+        <div class="ico">📍</div>
+        <h3>Encontre a clínica fácil no Google e nas redes</h3>
+        <p>Presença forte nas buscas e no Instagram, para você nos achar quando mais precisa.</p>
+        <ul><li>Nota 5,0 no Google Maps</li><li>Localização fácil em Osasco</li><li>Conteúdo e dicas nas redes sociais</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🏆</div>
+        <h3>Autoridade e credibilidade</h3>
+        <p>Experiência com atletas, troféus na parede e avaliações reais de quem já foi atendido.</p>
+        <ul><li>Fisioterapia esportiva especializada</li><li>Profissionais capacitados</li><li>Atendimento humanizado e individual</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico">💬</div>
+        <h3>Atendimento rápido no WhatsApp</h3>
+        <p>Tire dúvidas e agende sua sessão a qualquer hora, sem filas e sem espera.</p>
+        <ul><li>Resposta 24h pelo WhatsApp</li><li>Agendamento em poucos cliques</li><li>Retorno rápido, sem perder contato</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Recovery</span>
+      <h2 class="display">Tratamentos e recursos</h2>
+      <p class="lead">O Recovery auxilia na recuperação muscular, na redução de dores e tensões, na prevenção de lesões e na melhora da mobilidade e do desempenho.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv reveal"><span class="ico">🔴</span><div><h4>Ventosaterapia</h4><p>Alívio de tensões e melhora da circulação local.</p></div></div>
+      <div class="serv reveal"><span class="ico">📍</span><div><h4>Dry Needling</h4><p>Agulhamento seco para pontos de dor e tensão muscular.</p></div></div>
+      <div class="serv reveal"><span class="ico">🔫</span><div><h4>Pistola de massagem</h4><p>Liberação muscular profunda e recuperação rápida.</p></div></div>
+      <div class="serv reveal"><span class="ico">⚡</span><div><h4>Eletroestimulação</h4><p>Ativação muscular e controle da dor.</p></div></div>
+      <div class="serv reveal"><span class="ico">💡</span><div><h4>Fotobiomodulação</h4><p>Luz terapêutica que acelera a regeneração dos tecidos.</p></div></div>
+      <div class="serv reveal"><span class="ico">🩹</span><div><h4>Bandagem elástica</h4><p>Suporte e estabilidade sem limitar o movimento.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE / FOTOS -->
+<section id="sobre">
+  <div class="container about-grid">
+    <div class="photos reveal">
+      <div class="ph"><img src="images/Captura de tela 2026-11-07 092820.png" alt="Entrada da clínica" onerror="this.style.display='none'"></div>
+      <div class="ph"><img src="images/Captura de tela 2026-11-07 094145.png" alt="Recepção da clínica" onerror="this.style.display='none'"></div>
+      <div class="ph"><img src="images/Captura de tela 2026-11-07 094401.png" alt="Sala de atendimento" onerror="this.style.display='none'"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Nossa clínica</span>
+      <h2 class="display">Ambiente moderno,<br>cuidado individual</h2>
+      <p class="lead">Dentro da academia Bodytech, em Osasco, a clínica une estrutura de ponta com atenção a cada detalhe. Cada paciente recebe um plano pensado para o seu corpo e o seu objetivo.</p>
+      <ul class="checks">
+        <li>Ambiente climatizado, limpo e confortável</li>
+        <li>Fisioterapia esportiva e recovery para atletas e praticantes</li>
+        <li>Atendimento humanizado, focado no bem-estar</li>
+        <li>Fácil acesso para quem treina na academia</li>
+      </ul>
+      <a class="btn btn-red" href="#contato">Quero agendar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEOS -->
+<section class="videos" id="videos">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Veja na prática</span>
+      <h2 class="display">O trabalho em vídeo</h2>
+      <p class="lead">Conheça de perto como são as sessões e os resultados.</p>
+    </div>
+    <div class="vid-grid">
+
+      <!-- OPÇÃO A: vídeo do seu computador (MP4 na pasta /videos) -->
+      <div class="vid reveal">
+        <span class="tag">Vídeo 1</span>
+        <video src="videos/video1.mp4" controls playsinline preload="metadata" poster="images/fachada.jpg"></video>
+      </div>
+
+      <!-- OPÇÃO B: YouTube (troque ID_DO_VIDEO). Para Shorts, use o ID do Short -->
+      <div class="vid reveal">
+        <span class="tag">Vídeo 2</span>
+        <video src="videos/video2.mp4" controls playsinline preload="metadata" poster="images/recepcao.jpg"></video>
+        <!--
+        <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" allowfullscreen loading="lazy"></iframe>
+        -->
+      </div>
+
+      <div class="vid reveal">
+        <span class="tag">Vídeo 3</span>
+        <video src="videos/video3.mp4" controls playsinline preload="metadata" poster="images/sala.jpg"></video>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Prova social</span>
+      <h2 class="display">Nota 5,0 no Google</h2>
+      <p class="lead">27 avaliações de pacientes que confiaram no nosso trabalho.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>Sensacional! Ótimo atendimento, cuidado com cada detalhe e resultado maravilhoso!</p>
+        <div class="who"><div class="av">J</div><div><b>Juliana Marcial</b><small>Local Guide · Google</small></div></div>
+        <div class="reply"><b>Resposta do proprietário:</b> Muito obrigado pela avaliação, Juliana! Será sempre um prazer cuidar de você!</div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>Gostei muito da experiência. Atendimento humanizado, muita atenção aos detalhes e preocupação com o bem-estar do paciente.</p>
+        <div class="who"><div class="av">M</div><div><b>Mayzza Vitória</b><small>Google</small></div></div>
+        <div class="reply"><b>Resposta do proprietário:</b> Ficamos muito felizes em saber que você se sentiu acolhida!</div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>Profissionais capacitados, recomendo. Quando precisei, superou minhas expectativas.</p>
+        <div class="who"><div class="av">W</div><div><b>Wesley Gabu</b><small>Google</small></div></div>
+        <div class="reply"><b>Resposta do proprietário:</b> Agradecemos pela recomendação e por confiar em nossos profissionais. Volte sempre!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="services">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2 class="display">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq"><button>O que é o Recovery?</button><div class="ans">É um conjunto de técnicas e recursos para acelerar a recuperação muscular, reduzir dores e tensões, prevenir lesões e melhorar a mobilidade e o desempenho.</div></div>
+      <div class="faq"><button>Preciso ser atleta para fazer?</button><div class="ans">Não. O atendimento serve para atletas, praticantes de atividade física e qualquer pessoa que queira cuidar do corpo.</div></div>
+      <div class="faq"><button>Como agendo minha sessão?</button><div class="ans">Pelo botão do WhatsApp ou pelo formulário abaixo. Você escolhe o melhor horário e confirmamos com você.</div></div>
+      <div class="faq"><button>Qual o horário de atendimento?</button><div class="ans">Funcionamos até as 22h. Confirme o horário do seu dia pelo WhatsApp.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato">
+  <div class="container contact-grid">
+    <div class="info reveal">
+      <h2 class="display">Agende sua<br>avaliação hoje</h2>
+      <p style="margin:18px 0 26px;opacity:.9">Preencha ao lado e continue a conversa direto no WhatsApp.</p>
+      <p>📍 <span>Av. dos Remédios, 779 - Remédios, Osasco - SP, 06298-005</span></p>
+      <p>📞 <a href="tel:+5511947078104"><b>(11) 94707-8104</b></a></p>
+      <p>🕙 <span>Aberto · Fecha às 22:00</span></p>
+      <div class="map">
+        <iframe loading="lazy" title="Mapa"
+          src="https://www.google.com/maps?q=Av.+dos+Rem%C3%A9dios,+779+-+Rem%C3%A9dios,+Osasco+-+SP&output=embed"></iframe>
+      </div>
+    </div>
+    <form class="form reveal" id="leadForm">
+      <h3>Fale com a gente</h3>
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="tel" id="tel" placeholder="Seu WhatsApp" required>
+      <select id="motivo" required>
+        <option value="">Como podemos ajudar?</option>
+        <option>Recuperação muscular</option>
+        <option>Dor ou tensão</option>
+        <option>Prevenção de lesões</option>
+        <option>Melhora de desempenho</option>
+        <option>Outro assunto</option>
+      </select>
+      <button class="btn btn-red" type="submit">Enviar pelo WhatsApp →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="ano"></span> Felipe Carmona Fisioterapia · Todos os direitos reservados</div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wpp" id="wpp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9c1.8 1 3.8 1.5 5.6 1.5 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.4 1.1 1.2-4.2-.3-.4a10.2 10.2 0 0 1-1.6-5.4C5.5 9.9 10.2 5.4 16 5.4s10.500 4.500 10.500 10.100S21.800 25.900 16 25.900zm5.700-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.200-.2.200-.4.200-.7.100-1.800-.9-3-1.600-4.200-3.600-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 2 .8 2.800.9 3.800.7.600-.1 1.800-.7 2.100-1.500.3-.7.300-1.300.2-1.500-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+/* ======= CONFIGURAÇÃO ======= */
+const WHATSAPP = "5511947078104"; // DDD + número
+const MSG_PADRAO = "Olá! Vim pelo site e gostaria de agendar uma avaliação.";
+
+/* ======= WhatsApp flutuante ======= */
+document.getElementById('wpp').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MSG_PADRAO)}`;
+
+/* ======= Formulário → WhatsApp ======= */
+document.getElementById('leadForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nome = document.getElementById('nome').value.trim();
+  const tel = document.getElementById('tel').value.trim();
+  const motivo = document.getElementById('motivo').value;
+  const texto = `Olá! Meu nome é ${nome}. Gostaria de agendar uma avaliação.\nMotivo: ${motivo}\nMeu WhatsApp: ${tel}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, '_blank');
+});
+
+/* ======= Header ao rolar ======= */
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
+
+/* ======= Menu mobile ======= */
+const menu = document.getElementById('menu');
+document.getElementById('burger').onclick = () => menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a => a.onclick = () => menu.classList.remove('open'));
+
+/* ======= Animação de entrada ======= */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+}, { threshold: .15 });
+document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 120 + 'ms'; io.observe(el); });
+
+/* ======= Contadores ======= */
+const co = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el = en.target, alvo = +el.dataset.count, dec = +(el.dataset.dec || 0), suf = el.dataset.suffix || '';
+    let t0 = null;
+    const passo = ts => {
+      t0 ??= ts;
+      const p = Math.min((ts - t0) / 1500, 1);
+      el.textContent = (alvo * p).toFixed(dec).replace('.', ',') + suf;
+      if (p < 1) requestAnimationFrame(passo);
+    };
+    requestAnimationFrame(passo);
+    co.unobserve(el);
+  });
+}, { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+/* ======= FAQ ======= */
+document.querySelectorAll('.faq button').forEach(b => b.onclick = () => b.parentElement.classList.toggle('open'));
+
+/* ======= Pausa vídeos quando outro começa ======= */
+const vids = document.querySelectorAll('video');
+vids.forEach(v => v.addEventListener('play', () => vids.forEach(o => o !== v && o.pause())));
+
+document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
